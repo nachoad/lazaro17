@@ -13,46 +13,59 @@
 </head>
 <body un-cloak class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col">
 
-  <!-- AppBar -->
-  <header class="sticky top-0 z-50 bg-zinc-900/80 backdrop-blur border-b border-zinc-800">
-    <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="/" class="text-lg font-semibold tracking-tight text-white no-underline">
-        Lázaro 17
-      </a>
-      <nav class="flex items-center gap-2">
-        <a href="#projects"
-           class="text-sm font-medium text-zinc-400 no-underline px-3 py-2 rounded-full hover:text-white hover:bg-white/8 transition-colors">
-          Projects
-        </a>
-        <a href="mailto:hello@lazaro17.com"
-           class="text-sm font-medium text-yellow-400 no-underline px-4 py-2 rounded-full border border-zinc-700 hover:bg-yellow-400/12 hover:border-yellow-400 transition-colors">
-          Contact
-        </a>
-      </nav>
-    </div>
-  </header>
-
   <main class="flex-1 max-w-4xl mx-auto w-full px-6">
 
-    <!-- Hero -->
-    <section class="pt-20 pb-16">
-      <h1 class="text-5xl font-bold tracking-tight leading-tight mb-4 hero-title">
+    <!-- Header / Hero -->
+    <section class="pt-16 pb-20">
+
+      <!-- Top row: wordmark + nav -->
+      <div class="flex items-center justify-between mb-16">
+        <span class="text-xs font-semibold uppercase tracking-widest text-zinc-500">
+          Lázaro 17
+        </span>
+        <nav class="flex items-center gap-6">
+          <a href="#projects"
+             class="text-xs font-semibold uppercase tracking-widest text-zinc-500 no-underline hover:text-white transition-colors">
+            Projects
+          </a>
+          <a href="mailto:hello@lazaro17.com"
+             class="text-xs font-semibold uppercase tracking-widest text-zinc-500 no-underline hover:text-white transition-colors">
+            Contact
+          </a>
+        </nav>
+      </div>
+
+      <!-- Big title -->
+      <h1 class="text-7xl font-bold tracking-tight leading-none mb-8 hero-title sm:text-8xl">
         We build apps<br />for smartphones
       </h1>
-      <p class="text-xl text-zinc-400 font-light">
-        A small independent studio with big ideas.
-      </p>
+
+      <!-- Tagline + CTA -->
+      <div class="flex items-center gap-6 flex-wrap">
+        <p class="text-lg text-zinc-400 font-light">
+          A small independent studio with big ideas.
+        </p>
+        <a href="#projects"
+           class="no-underline inline-flex items-center gap-2 bg-yellow-400 text-zinc-950 text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-yellow-300 transition-colors">
+          See our work
+          <span>↓</span>
+        </a>
+      </div>
+
     </section>
 
+    <!-- Divider -->
+    <div class="border-t border-zinc-800 mb-16"></div>
+
     <!-- Projects -->
-    <section id="projects" class="pb-20">
-      <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-6">
+    <section id="projects" class="pb-24">
+      <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-8">
         Projects
       </p>
       <div class="grid gap-4 grid-cols-1 sm:grid-cols-2">
 
         <!-- Card: viveParacuellos -->
-        <article class="bg-zinc-900 border border-zinc-800 rounded-2xl flex flex-col transition-shadow hover:shadow-lg hover:shadow-yellow-400/10 hover:border-zinc-700">
+        <article class="bg-zinc-900 border border-zinc-800 rounded-2xl flex flex-col transition-all hover:border-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/5">
           <div class="p-6 flex-1">
             <div class="flex items-start gap-4 mb-4">
               <span class="text-4xl leading-none">📍</span>
@@ -79,6 +92,7 @@
 
       </div>
     </section>
+
   </main>
 
   <footer class="border-t border-zinc-800 py-6 text-center text-sm text-zinc-500">
