@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>lazaro17 — indie app studio</title>
+  <title>Lázaro 17 — Indie App Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <a href="/" class="logo">Lázaro 17</a>
+  <header class="appbar">
+    <div class="appbar-inner">
+      <a href="/" class="appbar-title">Lázaro 17</a>
       <nav class="nav">
         <a href="#projects">Projects</a>
-        <a href="mailto:hello@lazaro17.com">Contact</a>
+        <a href="mailto:hello@lazaro17.com" class="nav-btn">Contact</a>
       </nav>
     </div>
   </header>
@@ -24,20 +27,26 @@
     </section>
 
     <section class="projects" id="projects">
-      <h2>Projects</h2>
+      <h2 class="section-label">Projects</h2>
       <div class="project-grid">
 
-        <article class="project-card">
-          <div class="project-icon">📍</div>
-          <div class="project-info">
-            <h3>viveParacuellos</h3>
-            <p class="project-desc">
+        <article class="card">
+          <div class="card-body">
+            <div class="card-header">
+              <span class="card-icon">📍</span>
+              <div>
+                <h3 class="card-title">viveParacuellos</h3>
+                <span class="chip">iOS &amp; Android</span>
+              </div>
+            </div>
+            <p class="card-desc">
               The complete city directory of Paracuellos del Jarama in your pocket.
               Discover local businesses, services and points of interest, and save
               your favourites for instant access.
             </p>
-            <span class="platform-badge">iOS &amp; Android</span>
-            <a href="/viveparacuellos-privacy" class="privacy-link">Privacy Policy</a>
+          </div>
+          <div class="card-actions">
+            <a href="/viveparacuellos-privacy" class="text-btn">Privacy Policy</a>
           </div>
         </article>
 
@@ -46,7 +55,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 lazaro17. Made with care.</p>
+    <p>&copy; 2026 Lázaro 17. Made with care.</p>
   </footer>
 </body>
 </html>

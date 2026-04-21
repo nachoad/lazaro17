@@ -1,119 +1,120 @@
 /* ── Layout ── */
 .prose {
-  max-width: 680px;
-  padding-top: 4rem;
-  padding-bottom: 5rem;
+  max-width: 720px;
+  padding: 3rem 1.5rem 5rem;
 }
 
-/* ── H1 ── */
+/* ── H1 — Display Small ── */
 .prose h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1.2;
-  color: var(--text);
+  font-size: 2.25rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.222;
+  color: var(--md-sys-color-on-surface);
   margin-bottom: 0.5rem;
 }
 
 .prose h1 + p {
-  font-size: 0.85rem;
-  color: var(--muted);
-  margin-bottom: 3.5rem;
+  font-size: 0.875rem;
+  color: var(--md-sys-color-on-surface-variant);
+  margin-bottom: 3rem;
 }
 
-/* ── H2: main sections ── */
+/* ── H2 — Title Large ── */
 .prose h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text);
-  margin-top: 3.5rem;
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.6rem;
-  border-bottom: 1px solid var(--border);
+  font-size: 1.375rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.273;
+  color: var(--md-sys-color-on-surface);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
-/* ── H3: sub-sections ── */
+/* ── H3 — Title Medium ── */
 .prose h3 {
   font-size: 1rem;
-  font-weight: 600;
-  color: var(--accent-light);
-  margin-top: 2.25rem;
-  margin-bottom: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.00938em;
+  line-height: 1.5;
+  color: var(--md-sys-color-primary);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-/* ── H4: minor headings ── */
+/* ── H4 — Label Large ── */
 .prose h4 {
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.00625em;
   text-transform: uppercase;
-  letter-spacing: 0.09em;
-  color: var(--muted);
-  margin-top: 1.75rem;
-  margin-bottom: 0.6rem;
+  color: var(--md-sys-color-on-surface-variant);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-/* ── Paragraphs ── */
+/* ── Body ── */
 .prose p {
-  font-size: 0.95rem;
-  color: var(--muted);
-  line-height: 1.8;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.714;
+  letter-spacing: 0.01786em;
+  color: var(--md-sys-color-on-surface-variant);
   margin-bottom: 1rem;
 }
 
 /* ── Lists ── */
 .prose ul {
-  margin: 0.25rem 0 1.5rem 1.5rem;
+  margin: 0 0 1.25rem 1.5rem;
   padding: 0;
   list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .prose li {
-  font-size: 0.95rem;
-  color: var(--muted);
-  line-height: 1.8;
-  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.714;
+  letter-spacing: 0.01786em;
+  color: var(--md-sys-color-on-surface-variant);
+  padding-left: 0.25rem;
 }
 
-/* paragraphs inside list items */
 .prose li > p {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.25rem;
 }
 
 .prose li > p:last-child {
   margin-bottom: 0;
 }
 
-/* nested lists */
 .prose li > ul {
   margin-top: 0.5rem;
   margin-bottom: 0;
   margin-left: 1.25rem;
   list-style: circle;
+  gap: 0.25rem;
 }
 
 .prose li > ul > li {
-  font-size: 0.9rem;
-  margin-bottom: 0.4rem;
+  font-size: 0.825rem;
 }
 
 /* ── Inline ── */
 .prose strong {
-  font-weight: 600;
-  color: var(--text);
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface);
 }
 
 .prose a {
-  color: var(--accent-light);
+  color: var(--md-sys-color-primary);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 .prose a:hover {
-  color: var(--text);
-}
-
-/* ── Header logo override ── */
-header a.logo {
-  text-decoration: none;
+  color: var(--md-sys-color-on-surface);
 }
