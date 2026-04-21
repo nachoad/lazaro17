@@ -1,6 +1,11 @@
 [un-cloak] { display: none }
 body { font-family: 'Inter', sans-serif; }
 
+#rotating-word {
+  display: inline-block;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 .hero-title {
   background: linear-gradient(135deg, #fff 30%, #facc15 70%, #f97316 100%);
   -webkit-background-clip: text;

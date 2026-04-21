@@ -37,7 +37,7 @@
 
       <!-- Big title -->
       <h1 class="text-7xl font-bold tracking-tight leading-none mb-8 hero-title sm:text-8xl">
-        We build apps<br />for smartphones
+        We build apps<br />for <span id="rotating-word">smartphones</span>
       </h1>
 
       <!-- Tagline + CTA -->
@@ -100,5 +100,20 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+  <script>
+    const words = ['smartphones', 'humans'];
+    const el = document.getElementById('rotating-word');
+    let i = 0;
+    setInterval(() => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(12px)';
+      setTimeout(() => {
+        i = (i + 1) % words.length;
+        el.textContent = words[i];
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, 300);
+    }, 2500);
+  </script>
 </body>
 </html>
