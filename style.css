@@ -1,0 +1,165 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --accent: #7c6af7;
+  --accent-light: #a799ff;
+  --text: #e8e8f0;
+  --muted: #8888aa;
+  --radius: 16px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 2rem;
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--accent-light);
+}
+
+.tagline {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: lowercase;
+}
+
+/* ── Main ── */
+main {
+  flex: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  width: 100%;
+}
+
+/* ── Hero ── */
+.hero {
+  margin-bottom: 4rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+/* ── Projects ── */
+.projects h2 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ── Project card ── */
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  display: flex;
+  gap: 1.25rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.project-icon {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.project-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.platform-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-light);
+  background: rgba(124, 106, 247, 0.12);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+}
+
+/* ── Footer ── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  main {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .project-card {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
